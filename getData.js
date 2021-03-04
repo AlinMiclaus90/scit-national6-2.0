@@ -59,7 +59,7 @@ function renderArticle(articleData) {
   article.appendChild(removeButton);
 
   removeButton.addEventListener("click", function(){
-
+article.remove();
   });
 
   articleListHtml.appendChild(article);
