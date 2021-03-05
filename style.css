@@ -76,4 +76,12 @@ textarea {
     margin: 15px;
     padding: 25px;
     text-align: center;
+    position: relative;
+
+}
+
+.hideButton {
+  position: absolute;
+top: 0px;
+right: 0px;
 }
