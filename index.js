@@ -30,26 +30,25 @@ sendButton.addEventListener("click", function () {
       formComplete = false;
     }
   }
-  if (formComplete) {
-    let message = document.getElementById("message");
-    message.classList.remove("msgsent");
+  if (formComplete === true) {
+    document.getElementById("message").id = "message-sent";
   }
 });
-// function checkContent() {
-//   let inputList = document
-//     .getElementById("contact-form")
-//     .querySelectorAll(".input-field");
+function checkContent() {
+  let inputList = document
+    .getElementById("contact-form")
+    .querySelectorAll(".input-field");
 
-//   for (let i = 0; i < inputList.length; i++) {
-//     let input = document
-//       .getElementById("contact-form")
-//       .querySelectorAll(".input-field")[i];
+  for (let i = 0; i < inputList.length; i++) {
+    let input = document
+      .getElementById("contact-form")
+      .querySelectorAll(".input-field")[i];
 
-//     console.log(input.value);
-//     if (input.value == "") {
-//       input.classList.add("red-class");
-//     } else {
-//       input.classList.remove("red-class");
-//     }
-//   }
-// }
+    console.log(input.value);
+    if (input.value == "") {
+      input.classList.add("red-class");
+    } else {
+      input.classList.remove("red-class");
+    }
+  }
+}

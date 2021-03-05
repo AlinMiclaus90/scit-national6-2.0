@@ -61,7 +61,19 @@ textarea {
 .red-class {
   border-color: red;
 }
-.msgsent {
+#message {
   display: none;
   color: green;
+  border: 1px solid black;
+  margin: none;
+  padding: 25px;
+  text-align: center;
+}
+
+#message-sent {
+    color: green;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 25px;
+    text-align: center;
 }
