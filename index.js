@@ -32,10 +32,14 @@ sendButton.addEventListener("click", function () {
   }
   if (formComplete === true) {
     document.getElementById("message").id = "message-sent";
- 
+   }
 
-  }
 });
+
+function changeClass () {
+document.getElementById("message-sent").id = "message";
+}
+
 function checkContent() {
   let inputList = document
     .getElementById("contact-form")
