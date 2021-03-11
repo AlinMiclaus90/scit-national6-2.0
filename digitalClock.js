@@ -9,22 +9,29 @@ const minutesParagraphs = document.querySelectorAll(".minutes p");
 let hours = 0;
 const hoursParagraphs = document.querySelectorAll(".hours p");
 
-setInterval(function () {
+
+document.getElementById("start-btn").addEventListener("click", startFunction );
+
+document.getElementById("stop-btn").addEventListener("click", function () {
+
+});
+
+document.getElementById("reset-btn").addEventListener("click", function () {
+
+});
+
+document.getElementById("save-btn").addEventListener("click", function () {
+  const savedTime = document.createElement("p");
+  savedTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+  document.body.appendChild(savedTime);
+});
+
+
+function startFunction() { 
+  setInterval(function () {
   renderDigits(seconds, secondsParagraphs);
   renderDigits(minutes, minutesParagraphs);
   renderDigits(hours, hoursParagraphs);
-
-  //   if (seconds === 59) {
-  //     seconds = 0;
-  //     if (minutes === 59) {
-  //         minutes = 0;
-  //     } else {
-  //         minutes++
-  //     }
-  //   } else {
-  //     seconds++;
-  // //   }
-  // }, 100);
 
   seconds++;
   if (seconds === 60) {
@@ -40,6 +47,7 @@ setInterval(function () {
     hours = 0;
   }
 }, 1000);
+}
 
 function renderDigits(nr, pList) {
   const stringDigits = nr + "";
@@ -53,3 +61,14 @@ function renderDigits(nr, pList) {
     pList[1].innerText = digitList[0];
   }
 }
+
+
+
+
+
+
+
+
+
+
+

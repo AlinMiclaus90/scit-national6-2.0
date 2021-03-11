@@ -9,3 +9,8 @@
 p {
   font-weight: bold;
 }
+
+.clock-buttons {
+  border: 1px solid black;
+}
+
