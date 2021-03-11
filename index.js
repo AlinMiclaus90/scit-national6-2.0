@@ -95,19 +95,19 @@ const arrayOdd = array.filter(element => element % 2)
 console.log(arrayOdd);
 
 
-function ourFilter (originalArray, filterFunction) {
+function ourFilter(originalArray, filterFunction) {
   const filteredArray = [];
   for (const element of originalArray) {
-    if (filterFunction (element)) {
-      console.log("element passed condition", element);
-      filteredArray.push(element);
-    }
+      if (filterFunction(element)) {
+          console.log('element passed condition', element);
+          filteredArray.push(element);
+      }
   }
 
   return filteredArray;
 }
 
-function isUneven () {
+function isUneven(element) {
   console.log(element % 2);
   return element % 2;
 }
