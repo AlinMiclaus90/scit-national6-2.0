@@ -10,25 +10,26 @@ let hours = 0;
 const hoursParagraphs = document.querySelectorAll(".hours p");
 
 
-document.getElementById("start-btn").addEventListener("click", startFunction );
+document.getElementById("start-btn").addEventListener("click", startFunction);
 
-document.getElementById("stop-btn").addEventListener("click", function () {
+document.getElementById("stop-btn").addEventListener("click", stopInterval);
 
+document.getElementById("reset-btn").addEventListener("click", function() {
+  
 });
 
-document.getElementById("reset-btn").addEventListener("click", function () {
-
-});
-
-document.getElementById("save-btn").addEventListener("click", function () {
+document.getElementById("save-btn").addEventListener("click", function() {
   const savedTime = document.createElement("p");
   savedTime.innerHTML = `${hours}:${minutes}:${seconds}`;
   document.body.appendChild(savedTime);
 });
 
+//  function startFunction() { 
 
-function startFunction() { 
-  setInterval(function () {
+let interval;
+
+  function startFunction() {
+  interval = setInterval(function() {
   renderDigits(seconds, secondsParagraphs);
   renderDigits(minutes, minutesParagraphs);
   renderDigits(hours, hoursParagraphs);
@@ -42,12 +43,15 @@ function startFunction() {
     minutes = 0;
     hours++;
   }
-
   if (hours === 24) {
     hours = 0;
   }
-}, 1000);
-}
+}, 100);
+  }
+
+function stopInterval() {
+  clearInterval(interval);
+};
 
 function renderDigits(nr, pList) {
   const stringDigits = nr + "";
