@@ -1,82 +1,89 @@
 console.log("JavaScript - AJAX");
-// The scope of this lesson is to fetch some data from a server and use it to dynamically render data to the user
-// We show the data to the user by creating new html elements and ad them to the existing html objects
 
-// "articleListHtml" will hold the new elements we will create for showing data
-// we need an existing reference so we can bind to it the new elements
 const articleListHtml = document.querySelector(".article-list");
 
-// we will get/fetch the data when user click on a button
 document.getElementById("get-data").addEventListener("click", function () {
-  // "fetch" is a JavaScript function that tells the browser the make a request the specified address in the argument
   fetch("https://simple-json-server-scit.herokuapp.com/posts")
-    // "this .then" is responsible for linking a callback function to the event trigger by the browser when the server responds back
     .then(handleFetchResponse)
-    // "this .then" is responsible for linking a callback function to the event trigger by the parser of the body of the response
-    // we need to parse the response so we can transform it from a string in form of a JSON to an actual JavaScript value, which in this case is a list of objects
     .then(useJSONResponse);
 });
 
-// because "handleFetchResponse" is used as a callback function in the first then of "fetch" the parameter will be the response from the servers
 function handleFetchResponse(response) {
-  console.log("response", response);
-  // .json() is responsible for parsing in an asynchronous way the body of the server response, from a JSON string to a JavaScript value
+  console.log("handleFetchResponse response is", response);
   return response.json();
 }
 
-// because  "useJSONResponse" is used in the second then of "fetch" the parameter will be the actual JavaScript value parsed from the body of the server
-// only in this function we can actually use the data to render dynamically something
 function useJSONResponse(json) {
-  console.log("json",json);
-
-  // by calling "renderArticles" we will render to page the articles from the server
+  console.log("useJSONResponse is:", json);
   renderArticles(json);
 }
 
 function renderArticles(articleList) {
-  // we need to remove the "No data" text in our html list container
   articleListHtml.innerText = "";
-
-  // the server responds with a list of objects
-  // every object represents a article
-  // every article has the same structure (id, title, content)
   for (const articleData of articleList) {
-    console.log("article Data 1",articleData);
-    console.log("article list", articleList)
+    console.log("article list is:", articleList);
+    console.log("articleData is:", articleData);
     renderArticle(articleData);
   }
-  
 }
 
 function renderArticle(articleData) {
   const article = document.createElement("div");
   const articleTitle = document.createElement("h3");
   const articleContent = document.createElement("p");
-  const commentList = document.createElement("div");
-  const comment = document.createElement("div");
-  const commentUser = document.createElement("h4");
-  const commentContent = document.createElement("p");
 
-  commentList.classList.add("comment-list");
-  comment.classList.add("comment");
-  commentUser.classList.add("comment-user");
-  commentContent.classList.add("comment-content");
-  
   articleListHtml.appendChild(article);
 
   article.appendChild(articleTitle);
   article.appendChild(articleContent);
-  article.appendChild(commentList);
 
-  commentList.appendChild(comment);
-  comment.appendChild(commentUser);
-  comment.appendChild(commentContent);
-
-
-  // after creating the necessary html structure for a article items, we need to populated with data
-  // we use the "articleData" as data source
   articleTitle.innerText = articleData.title;
   articleContent.innerText = articleData.content;
-  console.log("article data 2", articleData);
-}
 
+  postId = articleData.id;
+  console.log("post ID is:", postId);
+  const url = "https://simple-json-server-scit.herokuapp.com/comments?postId=" + postId;
+  fetch(url)
+      .then(handleFetchResponseComments)
+      .then(useJSONResponseComments);
+      console.log("url data is",url);
+
+  function handleFetchResponseComments(response) {
+      console.log("handleFetchResponseComments is:", response);
+      return response.json();
+  }        
+
+  function useJSONResponseComments(json) {
+      console.log("useJSONResponseComments is:", json);
+      renderComments(json);
+  }    
+
+  function renderComments(commentsList) {
+      for (const commentsData of commentsList) {
+          console.log("comment data is:", commentsData);
+          console.log("comment list is:", commentsList);
+          renderComment(commentsData);
+      }
+  }
+  const commentsList = document.createElement("div");   
+
+  function  renderComment(commentsData) {
+   
+  const comments = document.createElement("div");
+  const commentUser = document.createElement("h4");
+  const commentContent = document.createElement("p");
+
+  comments.appendChild(commentUser);
+  comments.appendChild(commentContent);
+  commentsList.appendChild(comments);
+  article.appendChild(commentsList);
+  commentsList.className = "comments-list";
+  comments.className = "comment";
+  comments.style.paddingLeft = "20px";
+  commentUser.className = "comment-user";
+  commentContent.className = "comment-content";
+
+  commentUser.innerText = commentsData.username;
+  commentContent.innerText = commentsData.content;
+  } 
+}
