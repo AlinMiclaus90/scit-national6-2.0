@@ -27,7 +27,7 @@ function handleFetchResponse(response) {
 // because  "useJSONResponse" is used in the second then of "fetch" the parameter will be the actual JavaScript value parsed from the body of the server
 // only in this function we can actually use the data to render dynamically something
 function useJSONResponse(json) {
-  console.log(json);
+  console.log("json",json);
 
   // by calling "renderArticles" we will render to page the articles from the server
   renderArticles(json);
@@ -41,23 +41,42 @@ function renderArticles(articleList) {
   // every object represents a article
   // every article has the same structure (id, title, content)
   for (const articleData of articleList) {
-    console.log(articleData);
+    console.log("article Data 1",articleData);
+    console.log("article list", articleList)
     renderArticle(articleData);
   }
+  
 }
 
 function renderArticle(articleData) {
   const article = document.createElement("div");
   const articleTitle = document.createElement("h3");
   const articleContent = document.createElement("p");
+  const commentList = document.createElement("div");
+  const comment = document.createElement("div");
+  const commentUser = document.createElement("h4");
+  const commentContent = document.createElement("p");
+
+  commentList.classList.add("comment-list");
+  comment.classList.add("comment");
+  commentUser.classList.add("comment-user");
+  commentContent.classList.add("comment-content");
+  
+  articleListHtml.appendChild(article);
 
   article.appendChild(articleTitle);
   article.appendChild(articleContent);
+  article.appendChild(commentList);
 
-  articleListHtml.appendChild(article);
+  commentList.appendChild(comment);
+  comment.appendChild(commentUser);
+  comment.appendChild(commentContent);
+
 
   // after creating the necessary html structure for a article items, we need to populated with data
   // we use the "articleData" as data source
   articleTitle.innerText = articleData.title;
   articleContent.innerText = articleData.content;
+  console.log("article data 2", articleData);
 }
+
