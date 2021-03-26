@@ -1,5 +1,6 @@
 console.log("My beautiful Homework");
 
+
 document
 .getElementById("add-task-button")
 .addEventListener("click", () => {
@@ -29,4 +30,39 @@ document
   },
   body: JSON.stringify(payload)
 })
+.then(getData);
 });
+
+function getData() {
+  document
+  .getElementById("add-task-button")
+  .addEventListener("click", () => {
+    fetch('https://simple-json-server-scit.herokuapp.com/todo')
+    .then(handleFetchResponse)
+    .then(useJSONResponse);
+  })
+};
+
+function handleFetchResponse(response) {
+  console.log("response is:", response);
+  return response.JSON();
+}
+
+function useJSONResponse(json) {
+  console.log("JSON is:", json);
+  renderTasks(json);
+}
+
+function renderTasks(tasks) {
+  const taskList = document.getElementsByClassName("task-list");
+
+  const taskItem = document.createElement("div");
+
+
+  taskList.appendChild(taskItem);
+
+  taskItem.innerText = taskItem;
+
+
+
+}
