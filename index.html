@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>To do Homework</title>
 </head>
 <body>
-    <div id="header">
-        <img id="icon" src="icons8-checklist-48.png" alt="CheckList Icon">
-        <p>Alin's to do list</p>
-    </div>
-    <div id="task-manager">
-        <div class="task-list"></div>
-        <input type="text" id="input" placeholder="Write a new task">
-        <img id="add-task-button" src="icons8-plus-math-26.png" alt="Add Task Button">
+    <header id="header">
+        <img src="icons8-checklist-48.png" alt="checklist">
+        <h1>Alin's To Do List</h1>
+    </header>
+    <div class="added-task"></div>
+    <div class="container">
+        <input class="input-task" type="text" placeholder="Add your task">
+        <button id="add-task-button">
+            <img src="icons8-plus-math-26.png" alt="Add Button" width="30px" height="30px">
+        </button>
     </div>
     <script src="index.js"></script>
 </body>

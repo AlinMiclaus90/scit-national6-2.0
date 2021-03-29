@@ -1,50 +1,56 @@
-html body {
-    width: 100%;
+html, body {
     height: 100%;
-    margin: 0%;
+    width: 100%;
+    margin: 0;
 }
-    
+
 #header {
+    margin: 0;
+    padding: 10px;
     background-color: tomato;
+    height: 50px;
     display: flex;
     align-items: center;
 }
 
-#icon {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    justify-content: center;
-    margin: 5px;
+
+#header h1 {
+    padding-left: 50px;
 }
 
-#header p {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    justify-content: center;
-    margin: 6px;
-}
-
-#task-manager {
+.container {
+    margin: 30px;
     display: flex;
-    margin: 10px;
+    align-items: center;
+
 }
 
-#input {
-    margin: 5px;
-    border: 1px solid gray;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.input-task {
+    height: 30px;
+    border: 1px solid black;
 }
 
 #add-task-button {
-    background-color: tomato;
-    border-radius: 100%;
-    margin: 5px;
+    padding: 0;
     margin-left: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: tomato;
+    outline: none;
+    
+}
+
+#add-task-button :hover{
+    background-color: red;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
 }
 
 
+
+.taskStyle {
+    display: flex;
+    align-items: center;
+    margin:30px;
+}
