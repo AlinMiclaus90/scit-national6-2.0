@@ -1,55 +1,28 @@
-// console.log("RECAP");
+console.log("BOM - Browser Object Model");
 
-// document.addEventListener("click", () => {
-//   console.log("click");
-// });
+console.log(window.screen);
 
-// setTimeout(() => {
-//   console.log("time end");
-// }, 1000);
+document.getElementById("open").addEventListener("click", () => {
+  window.open();
+});
 
-// const interval = setInterval(() => {
-//   console.log("ping");
-// }, 2000);
+document.getElementById("close").addEventListener("click", () => {
+  window.close();
+});
 
-// clearInterval(interval);
+setTimeout(() => {
+  console.log("focus");
+  window.focus();
+}, 3000);
 
+window.addEventListener("load", () => {
+  console.log("all is loaded");
+});
 
-// we need to call "secondStep" only after "firstStep" ended
+window.addEventListener("resize", (event) => {
+  console.log(event);
+});
 
-// function firstStep() {
-//     setTimeout(() => {
-//         console.log("End of first step!");
-//         secondStep();
-//     }, 2000);
-    
-// };
-
-// function secondStep() {
-//     setTimeout(() => {
-//         console.log("End of second step")
-//         thirdStep();
-//     }, 1000);
-// };
-
-// function thirdStep() {
-//     setTimeout(() => {
-//         console.log("End of third step")
-//     }, 500);
-// };
-
-// firstStep();
-
-
-// Promises
-
-function firstStep() {
-return new Promise()
-
-
-    setTimeout(() => {
-        console.log("End of first step!");
-        secondStep();
-    }, 2000);
-    
-};
+document.getElementById("redirect").addEventListener("click", () => {
+  window.location = "https://google.com";
+});
