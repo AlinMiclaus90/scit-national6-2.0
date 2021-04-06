@@ -1,0 +1,22 @@
+{
+  "name": "scit-national6-2.0-miclaus",
+  "version": "1.0.0",
+  "description": "project of scit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlinMiclaus90/scit-national6-2.0-miclaus.git"
+  },
+  "author": "alin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlinMiclaus90/scit-national6-2.0-miclaus/issues"
+  },
+  "homepage": "https://github.com/AlinMiclaus90/scit-national6-2.0-miclaus#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
