@@ -1,13 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Ovo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Homework - HTML & CSS</title>
+  </head>
+
+  <body>
+    <div id="item-list">
+      <div class="item">
+        <div class="header">
+          <img src="img1.PNG" alt="img 1" />
+        </div>
+        <div class="item-name">
+          <h3>Wild West Hoodie</h3>
+        </div>
+        <div class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="calificative">5.0</span>
+          <i class="fa fa-heart"></i>
+          <div class="likes">29</div>
+        </div>
+        <p class="item-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing
+        </p>
+        <div class="shop">
+          <button class="button button-one" title="Ad this item in your cart">CART</button>
+          <button class="button button-two" title="View the item description">VIEW</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <img src="img2.PNG" alt="img 2" />
+        </div>
+        <div class="item-name">
+          <h3>Wild West Hoodie</h3>
+        </div>
+        <div class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="calificative">5.0</span>
+          <button id="counting-button" type="button" onclick="onClick()"><i class="fa fa-heart" title="Click me!"></i></button>
+          <div class="likes"><a id="clicks">0</a></div>
+        </div>
+        <p class="item-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing
+        </p>
+
+        <div class="shop">
+          <button class="button button-three" title="Ad this item in your cart">CART</button>
+          <button class="button button-four" title="View the item description">VIEW</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="header">
+          <img src="img3.PNG" alt="img 3" />
+        </div>
+        <div class="item-name">
+          <h3>Wild West Hoodie</h3>
+        </div>
+        <div class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="calificative">5.0</span>
+          <i class="fa fa-heart"></i>
+          <div class="likes">29</div>
+        </div>
+        <p class="item-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing
+        </p>
+        <div class="shop">
+          <button class="button button-one" title="Ad this item in your cart">CART</button>
+          <button class="button button-two" title="View the item description">VIEW</button>
+        </div>
+      </div>
+    </div>
+
+<script>
+  let clicks = 0;
+  function onClick() {
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+  };
+</script>
+
+  </body>
 </html>

@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+#item-list {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    }
+
+.item {
+    box-shadow: 0px 7px 11px 3px rgba(0,0,0,0);
+    transition: box-shadow 0.3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.item:hover {
+    box-shadow:  0px 7px 11px 3px rgba(0,0,0,0.18);
+}
+
+.header {
+    display: flex;
+    }
+
+.header img {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    text-align: center;
+}
+
+.item-name h3 {
+  font-weight: 500;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.rating {
+  display: flex;
+  position: relative;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+ justify-content: center;
+ align-items: center;
+ margin-top: 20px;
+ margin-bottom: 30px;
+}
+
+.checked {
+  color: orange;
+  margin-right: 15px;
+}
+
+.calificative {
+  margin-right: 35px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(99, 99, 99);
+  font-family: 'Mulish', sans-serif;
+}
+
+.fa-heart {
+  color: rgb(224, 224, 224);
+  border: none;
+}
+
+.likes {
+  font-family: 'Mulish', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(99, 99, 99);
+  margin-left: 15px;
+}
+
+.fa-heart:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.item-description {
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: rgb(120, 120, 120);
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.shop{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.button-one {
+  background-color: black;
+  color: white;
+  border: solid black 3px;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;  
+  font-size: 15px;
+  font-style: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button-two {
+  background-color: white;
+  color: black;
+  border: solid black 3px;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  font-size: 15px;
+}
+
+.button-three {
+  background-color: white;
+  color: black;
+  border: solid black 3px;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  font-size: 15px;
+}
+
+.button-three:hover {
+  background-color: black;
+  color: white;
+  transition-duration: .3s;
+}
+
+.button-four {
+  background-color: white;
+  color: black;
+  border: solid black 3px;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  font-size: 15px;
+}
+
+.button-four:hover {
+  background-color: black;
+  color: white;
+  transition-duration: .3s;
+}
+
+#counting-button {
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#counting-button {
+  border: none;
+  outline: none;
+}
