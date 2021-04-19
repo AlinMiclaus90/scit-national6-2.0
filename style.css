@@ -9,12 +9,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/1st_Fighter_Wing_hosts_coalition_aerial_exercise_%283%29.jpg/1200px-1st_Fighter_Wing_hosts_coalition_aerial_exercise_%283%29.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #game-scene {
   width: 1000px;
   height: 500px;
-  border: 1px solid grey;
+  border: 2px solid black;
   position: relative;
   overflow: hidden;
+}
+
+.lives {
+  width: 30px;
+  height: 30px;
+  top: -270px;
+  right: 550px;
+  position: relative;
+}
+
+.hit-obstacle {
+  color: black;
 }
