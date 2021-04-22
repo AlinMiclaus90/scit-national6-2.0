@@ -10,7 +10,7 @@ function App() {
       <Header />
       <ToDoItem label="task 1" checkValue={false} />
       <ToDoItem label="task 2" checkValue={true} />
-      <ToDoItem label="task 3" />
+      <ToDoItem label="task 3" checkValue={true} />
       <ToDoItemWithState label="task 4" checkValue={true} />
     </div>
   );
