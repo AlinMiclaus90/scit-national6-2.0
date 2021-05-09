@@ -85,3 +85,8 @@ body {
 #pagination > * {
   margin: 10px;
 }
+
+.selectedBreed {
+  text-decoration: underline;
+  background-color: lightslategray;
+}
