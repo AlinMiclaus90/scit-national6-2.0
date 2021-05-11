@@ -95,3 +95,6 @@ buttonBackward.addEventListener("click", function () {
     images.src = storedImage[localStorage.index];
   }
 });
+
+const a = add(2, 3);
+console.log(a);
