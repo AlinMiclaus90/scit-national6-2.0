@@ -1,4 +1,4 @@
-import { renderBreedImage } from "./renderBreedImage";
+import { renderBreedImage } from "./images";
 
 const pageNumber = document.getElementById("page-number");
 

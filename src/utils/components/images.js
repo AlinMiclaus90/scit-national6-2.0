@@ -1,9 +1,7 @@
-let storedImage = [];
-
 const images = document.getElementById("breed-image");
-const buttonBackward = document.getElementById("backward");
-const buttonForward = document.getElementById("forward");
 const pageNumber = document.getElementById("page-number");
+
+let storedImage = [];
 
 export function renderBreedImage(image) {
   var breedImagesObjects = Object.values(image);
@@ -12,7 +10,7 @@ export function renderBreedImage(image) {
   else images.src = storedImage[0];
 }
 
-buttonForward.addEventListener("click", function () {
+export function forward() {
   if (document.querySelector(".selectedBreed")) {
     if (localStorage.index < storedImage.length - 1) {
       localStorage.index++;
@@ -21,9 +19,9 @@ buttonForward.addEventListener("click", function () {
     pageNumber.innerText = parseInt(localStorage.index) + 1;
     images.src = storedImage[localStorage.index];
   }
-});
+}
 
-buttonBackward.addEventListener("click", function () {
+export function backward() {
   if (document.querySelector(".selectedBreed")) {
     if (localStorage.index >= 1) {
       localStorage.index--;
@@ -32,4 +30,4 @@ buttonBackward.addEventListener("click", function () {
     pageNumber.innerText = parseInt(localStorage.index) + 1;
     images.src = storedImage[localStorage.index];
   }
-});
+}
