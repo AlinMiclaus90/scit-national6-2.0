@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* home */
+
+.home {
+  background: url("/img/comingsoon.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+/* navigation bar / menu  */
+
+.nav {
+  height: 50px;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.nav div {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.nav ul {
+  position: absolute;
+  right: 5px;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  color: white;
+  padding: 5px;
+}
+
+/* home page content */
+
+.home-text-container {
+  text-align: center;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  color: rgb(128, 122, 122);
+}
+
+.about-me {
+  margin: 20px;
+  margin-top: 200px;
+  width: 80%;
+  text-align: justify;
+  justify-content: space-between;
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+}
+
+.about-me p {
+  width: 80%;
+  margin-left: 100px;
+  text-shadow: currentColor;
+}
+
+.about-me h3 {
+  margin-left: 40px;
+}
+
+.about-me img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -250px;
+  margin-left: 100px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* aside */
+
+.aside {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 0;
+  margin-right: 100px;
+  margin-top: 200px;
+}
+
+.aside button {
+  width: 200px;
+  height: 30px;
+  color: white;
+  background-color: gray;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+}
+
+.aside button:hover {
+  background-color: rgb(92, 91, 91);
+}
+
+.aside button:active {
+  background-color: rgb(92, 91, 91);
+  box-shadow: 0 5px rgb(51, 51, 51);
+  transform: translateY(4px);
+}
+
+.aside ul * {
+  list-style: none;
+  padding: 5px;
+  display: none;
+}
+
+/* footer */
+
+.footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer-contact {
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer-contact p {
+  color: lightgray;
+  margin-left: 50px;
+}
+
+.footer-contact button:hover {
+  font-size: 30px;
+}
+
+#footer-address {
+  background: none;
+  color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+#footer-phone-number {
+  background: none;
+  color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+#footer-email {
+  background: none;
+  color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+#footer-email a {
+  text-decoration: none;
+  color: lightgray;
+  font-size: 15px;
+}
+
+#footer-email a:hover {
+  font-size: 30px;
+}
+
+/* studies */
+
+.studies {
+  background: url("/img/IOfeHw.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.studies-content {
+  margin: 25px;
+  width: 500px;
+}
+
+.studies-content h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.studies-content p {
+  text-align: justify;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+
+/* working experience */
+
+.working-experience {
+  background-image: url(/img/website-parallax-background-C.jpg);
+  background-size: 100% 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.working-experience-content {
+  margin: 80px;
+  text-align: center;
+  color: lightgray;
+}
+
+.working-places ul {
+  padding: 0;
+}
+
+.working-places ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+  width: 300px;
+}
+
+.working-places ul li img {
+  width: 300px;
+  height: 200px;
+}
+
+.working-places ul li p {
+  text-align: justify;
+}
+
+/* contact */
+
+.contact {
+  height: 100%;
+  background-image: url(/img/83-838381_html-wallpaper-background-code-coding-tags.jpg);
+  background-size: 100% 100%;
+}
+
+.contact-content {
+  margin: 80px auto 0 auto;
+  text-align: center;
+}
