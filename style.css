@@ -99,12 +99,13 @@ body {
   color: white;
   top: 0;
   right: 0;
-  margin-right: 100px;
+  margin-right: 150px;
   margin-top: 200px;
+  display: grid;
 }
 
 .aside button {
-  width: 200px;
+  width: 250px;
   height: 30px;
   color: white;
   background-color: gray;
@@ -114,6 +115,7 @@ body {
   outline: none;
   border: none;
   border-radius: 25px;
+  margin: 10px;
 }
 
 .aside button:hover {
@@ -127,6 +129,11 @@ body {
 }
 
 .aside ul * {
+  list-style: none;
+  padding: 5px;
+}
+
+.show-list {
   list-style: none;
   padding: 5px;
   display: none;
@@ -189,32 +196,11 @@ body {
   font-size: 30px;
 }
 
-/* studies */
-
-.studies {
-  background: url("/img/IOfeHw.jpg");
-  background-size: 100% 100%;
-  height: 100vh;
-}
-
-.studies-content {
-  margin: 25px;
-  width: 500px;
-}
-
-.studies-content h1 {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  color: black;
-}
-
-.studies-content p {
-  text-align: justify;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-}
-
 /* working experience */
+
+.working-places {
+  display: inline-block;
+}
 
 .working-experience {
   background-image: url(/img/website-parallax-background-C.jpg);
@@ -232,6 +218,13 @@ body {
 
 .working-places ul {
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.working-places ul :hover {
+  background: rgba(0, 0, 0, 0.486);
+  font-size: 15px;
 }
 
 .working-places ul li {
@@ -248,6 +241,47 @@ body {
 
 .working-places ul li p {
   text-align: justify;
+  padding: 1px;
+}
+
+#technologies {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+#technologies li {
+  padding: 1px;
+  margin: 5px;
+  margin-left: -110px;
+}
+
+/* studies */
+
+.studies {
+  background: url("/img/IOfeHw.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.studies-main-page h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.studies-content {
+  color: lightgray;
+  margin: 50px;
+}
+
+.studies-content-list {
+  margin: 100px;
+  width: 700px;
+}
+
+.studies-content-list h4 {
+  text-align: right;
 }
 
 /* contact */
@@ -258,7 +292,60 @@ body {
   background-size: 100% 100%;
 }
 
-.contact-content {
+.contact h1 {
   margin: 80px auto 0 auto;
   text-align: center;
+}
+
+.contact p {
+  color: white;
+  padding: 2px;
+  margin-left: 100px;
+  font-size: larger;
+}
+
+.contact-content {
+  display: flex;
+  text-align: right;
+  margin-top: 300px;
+}
+
+.contact-content .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  margin: 20px 50px;
+  border-radius: 20%;
+  right: 0;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-google {
+  background: white;
+  color: red;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: green;
+  color: white;
+}
+
+.fa-map-marker {
+  background: tomato;
+  color: white;
 }

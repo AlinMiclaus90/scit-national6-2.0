@@ -57,16 +57,18 @@
       </div>
 
       <aside class="aside">
-        <button class="working-with">Working with:</button>
-        <ul class="working-with-ul">
+        <button onclick="showWorkingWithList()" class="working-with">
+          Working with:
+        </button>
+        <ul id="working-with-ul" class="show-list">
           <li>HTML 5</li>
           <li>CSS 3</li>
           <li>JavaScript</li>
           <li>React JS</li>
           <li>GitHub</li>
         </ul>
-        <button class="skills">Skills</button>
-        <ul class="skills-ul">
+        <button onclick="showSkillsList()" class="skills">Skills</button>
+        <ul id="skills-ul" class="show-list">
           <li>Creativity</li>
           <li>Critical thinking</li>
           <li>Problem solving</li>
@@ -80,8 +82,10 @@
           <li>Interpersonal Skills</li>
           <li>Ability to learn quickly</li>
         </ul>
-        <button class="languages">Languages</button>
-        <ul class="languages-ul">
+        <button onclick="showLanguagesList()" class="languages">
+          Languages
+        </button>
+        <ul id="languages-ul" class="show-list">
           <li>
             English
             <ul>
